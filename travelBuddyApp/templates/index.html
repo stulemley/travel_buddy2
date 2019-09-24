@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Buddy Index</title>
+</head>
+
+<body>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li style='color: red;'>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <h1>Index!</h1>
+    <h3><a href="/main">Travel Buddy Main Page</a></h3>
+    <h3><a href="/travels/add">Travel Buddy Trip Creator!</a></h3>
+
+</body>
+
+</html>

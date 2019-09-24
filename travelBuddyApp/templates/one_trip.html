@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destination</title>
+</head>
+
+<body>
+    <p><a href="/travels">Home</a> </p>
+    <p><a href="/logout">Logout</a> </p>
+    <h1>Destination: {{ this_trip.dest }}</h1>
+    <h4>Planned By: {{ this_trip_creator.user_name }}</h4>
+    <h4>Description: {{ this_trip.desc }}</h4>
+    <h4>Travel Date From: {{ this_trip.travel_start }}</h4>
+    <h4>Travel Date To: {{ this_trip.travel_end }}</h4>
+
+    <h2>All users on this trip:</h2>
+    {% for user in this_trips_other_users %}
+    <p>{{ user.user_name }}</p>
+    {% endfor %}
+</body>
+
+</html>

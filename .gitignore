@@ -1,0 +1,4 @@
+__pycache__/
+.vscode/
+djangoPy3Env/
+db.sqlite3

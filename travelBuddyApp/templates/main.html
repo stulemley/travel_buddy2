@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Buddy Login and Registration</title>
+</head>
+
+<body>
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li style='color: red;'>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <h1>Travel Buddy! Login</h1>
+    <h2>Registration:</h2>
+    <form action="/register" method="post">
+        {% csrf_token %}
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="">
+
+        <label for="user_name">User Name:</label>
+        <input type="text" name="user_name" id="">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="">
+
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" name="confirmPassword" id="">
+
+        <input type="submit" value="Register" id="">
+
+
+    </form>
+    <h2>Login:</h2>
+    <form action="/login" method="post">
+        {% csrf_token %}
+
+        <label for="user_name">User Name:</label>
+        <input type="text" name="user_name" id="">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="">
+
+        <input type="submit" value="Login" id="">
+
+
+    </form>
+
+</body>
+
+</html>
